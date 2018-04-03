@@ -1,0 +1,59 @@
+
+
+<!doctype html>
+<!--
+We use an approach like [Modernizr](https://modernizr.com/docs#no-js) to detect JS support,
+and change the styling accordingly. Add the class `aui-no-js` to the `html` element.
+Later the class will be renamed to `aui-js` by a JavaScript.
+-->
+<html class="aui-no-js">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+      Audi UI Test
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+      // This will rewrite <html class="aui-no-js"> to <html class="aui-js">.
+      // This lets hide certain elements that should only be exposed in environments that execute JavaScript.
+      document.documentElement.className = document.documentElement.className.replace(new RegExp("(^|\\s)aui-no-js(\\s|$)"), "$1aui-js$2");
+    </script>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+
+  <body>
+
+    
+    <nav class="aui-nav aui-js-nav aui-nav--bar">
+  <div class="aui-nav__panel">
+    <ul class="aui-nav__items">
+      <li class="aui-nav__item">
+        <button class="aui-nav__action" type="button"><span>Button echo</span></button>
+      </li>
+      <li class="aui-nav__item">
+        <a class="aui-nav__action is-active" href="#">Link alpha</a>
+      </li>
+      <li class="aui-nav__item">
+        <a class="aui-nav__action" href="#">Link bravo</a>
+      </li>
+      <li class="aui-nav__item">
+        <a class="aui-nav__action" href="#">Link charlie</a>
+      </li>
+      <li class="aui-nav__item">
+        <a class="aui-nav__action" href="#">Link delte</a>
+      </li>
+      <li class="aui-nav__item">
+        <button class="aui-nav__action is-disabled" type="button" disabled>Disabled</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <script src="app.bundle.js"></script>
+    
+  </body>
+
+</html>
